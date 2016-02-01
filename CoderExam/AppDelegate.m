@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "FJStartupViewController.h"
 
 @interface AppDelegate ()
 
@@ -14,9 +15,19 @@
 
 @implementation AppDelegate
 
+static AppDelegate *app = nil;
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    
+    FJStartupViewController *startupController = [[FJStartupViewController alloc] init];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:startupController];
+    self.window.rootViewController = navController;
+    
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
@@ -40,6 +51,10 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
++ (AppDelegate *)app {
+    return (AppDelegate *)[[UIApplication sharedApplication] delegate];
 }
 
 @end

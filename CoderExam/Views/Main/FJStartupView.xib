@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FJStartupViewController">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="QHC-VE-O0f"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="startup.png" translatesAutoresizingMaskIntoConstraints="NO" id="NUb-dn-DBd" userLabel="startupImg">
+                    <rect key="frame" x="30" y="160" width="360" height="410"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="IT面试宝典" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARo-qt-67r" userLabel="titleLabel">
+                    <rect key="frame" x="100" y="80" width="200" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="NUb-dn-DBd" secondAttribute="bottom" constant="30" id="GxG-5U-sRI"/>
+                <constraint firstItem="NUb-dn-DBd" firstAttribute="top" secondItem="ARo-qt-67r" secondAttribute="bottom" constant="30" id="TIh-Pk-IC6"/>
+                <constraint firstItem="ARo-qt-67r" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="80" id="VaL-js-h8n"/>
+                <constraint firstItem="NUb-dn-DBd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="XGc-g6-cBv"/>
+                <constraint firstAttribute="trailing" secondItem="NUb-dn-DBd" secondAttribute="trailing" constant="30" id="lFn-c7-OoF"/>
+                <constraint firstItem="ARo-qt-67r" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="100" id="sY3-VI-bnR"/>
+                <constraint firstAttribute="trailing" secondItem="ARo-qt-67r" secondAttribute="trailing" constant="100" id="u9q-g0-Pf5"/>
+            </constraints>
+            <point key="canvasLocation" x="167" y="406"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="startup.png" width="388" height="522"/>
+    </resources>
+</document>

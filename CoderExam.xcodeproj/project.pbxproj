@@ -9,10 +9,31 @@
 /* Begin PBXBuildFile section */
 		71B5DC181C5F938D009C457A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B5DC171C5F938D009C457A /* main.m */; };
 		71B5DC1B1C5F938D009C457A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B5DC1A1C5F938D009C457A /* AppDelegate.m */; };
-		71B5DC1E1C5F938D009C457A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B5DC1D1C5F938D009C457A /* ViewController.m */; };
-		71B5DC211C5F938D009C457A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71B5DC1F1C5F938D009C457A /* Main.storyboard */; };
 		71B5DC231C5F938D009C457A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71B5DC221C5F938D009C457A /* Assets.xcassets */; };
 		71B5DC261C5F938D009C457A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71B5DC241C5F938D009C457A /* LaunchScreen.storyboard */; };
+		71B5DC321C5F9674009C457A /* FJMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B5DC311C5F9674009C457A /* FJMainViewController.m */; };
+		71B5DC351C5F96E5009C457A /* FJStartupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B5DC341C5F96E5009C457A /* FJStartupViewController.m */; };
+		71B5DC3E1C5F9EAF009C457A /* startup.png in Resources */ = {isa = PBXBuildFile; fileRef = 71B5DC3D1C5F9EAF009C457A /* startup.png */; };
+		71B5DC401C5F9EBF009C457A /* placeholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 71B5DC3F1C5F9EBF009C457A /* placeholder@2x.png */; };
+		71B5DC451C5F9ED3009C457A /* ic_category.png in Resources */ = {isa = PBXBuildFile; fileRef = 71B5DC411C5F9ED3009C457A /* ic_category.png */; };
+		71B5DC461C5F9ED3009C457A /* ic_find.png in Resources */ = {isa = PBXBuildFile; fileRef = 71B5DC421C5F9ED3009C457A /* ic_find.png */; };
+		71B5DC471C5F9ED3009C457A /* ic_home.png in Resources */ = {isa = PBXBuildFile; fileRef = 71B5DC431C5F9ED3009C457A /* ic_home.png */; };
+		71B5DC481C5F9ED3009C457A /* ic_mine.png in Resources */ = {isa = PBXBuildFile; fileRef = 71B5DC441C5F9ED3009C457A /* ic_mine.png */; };
+		71B5DC4A1C5F9F5A009C457A /* constants.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71B5DC491C5F9F5A009C457A /* constants.plist */; };
+		71B5DC521C5F9FCD009C457A /* FJConstantsUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B5DC4D1C5F9FCD009C457A /* FJConstantsUtil.m */; };
+		71B5DC531C5F9FCD009C457A /* FJImageUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B5DC4F1C5F9FCD009C457A /* FJImageUtil.m */; };
+		71B5DC541C5F9FCD009C457A /* FJSandboxUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B5DC511C5F9FCD009C457A /* FJSandboxUtil.m */; };
+		71B5DC7C1C5FA281009C457A /* FJTabHomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71B5DC7B1C5FA281009C457A /* FJTabHomeView.xib */; };
+		71B5DC7F1C5FA412009C457A /* FJStartupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71B5DC7E1C5FA412009C457A /* FJStartupView.xib */; };
+		71B5DC831C5FA537009C457A /* FJTabCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B5DC821C5FA537009C457A /* FJTabCategoryViewController.m */; };
+		71B5DC861C5FA576009C457A /* FJTabCategoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71B5DC851C5FA576009C457A /* FJTabCategoryView.xib */; };
+		71B5DC891C5FA5ED009C457A /* FJTabHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B5DC881C5FA5ED009C457A /* FJTabHomeViewController.m */; };
+		71B5DC8D1C5FB38D009C457A /* FJTabFindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B5DC8C1C5FB38D009C457A /* FJTabFindViewController.m */; };
+		71B5DC901C5FB475009C457A /* FJTabFindView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71B5DC8F1C5FB475009C457A /* FJTabFindView.xib */; };
+		71B5DC951C5FB50E009C457A /* FJTabMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B5DC941C5FB50E009C457A /* FJTabMineViewController.m */; };
+		71B5DC971C5FB52E009C457A /* FJTabMineView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71B5DC961C5FB52E009C457A /* FJTabMineView.xib */; };
+		71B5DC9A1C5FBE3F009C457A /* FJAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B5DC991C5FBE3F009C457A /* FJAboutViewController.m */; };
+		71B5DC9C1C5FBE61009C457A /* FJAboutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71B5DC9B1C5FBE61009C457A /* FJAboutView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +41,42 @@
 		71B5DC171C5F938D009C457A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		71B5DC191C5F938D009C457A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		71B5DC1A1C5F938D009C457A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		71B5DC1C1C5F938D009C457A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		71B5DC1D1C5F938D009C457A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		71B5DC201C5F938D009C457A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		71B5DC221C5F938D009C457A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71B5DC251C5F938D009C457A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		71B5DC271C5F938D009C457A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71B5DC301C5F9674009C457A /* FJMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FJMainViewController.h; path = Controllers/Main/FJMainViewController.h; sourceTree = "<group>"; };
+		71B5DC311C5F9674009C457A /* FJMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FJMainViewController.m; path = Controllers/Main/FJMainViewController.m; sourceTree = "<group>"; };
+		71B5DC331C5F96E5009C457A /* FJStartupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FJStartupViewController.h; path = Controllers/Main/FJStartupViewController.h; sourceTree = "<group>"; };
+		71B5DC341C5F96E5009C457A /* FJStartupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FJStartupViewController.m; path = Controllers/Main/FJStartupViewController.m; sourceTree = "<group>"; };
+		71B5DC3D1C5F9EAF009C457A /* startup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = startup.png; path = Resources/Images/Background/startup.png; sourceTree = "<group>"; };
+		71B5DC3F1C5F9EBF009C457A /* placeholder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "placeholder@2x.png"; path = "Resources/Images/Placeholder/placeholder@2x.png"; sourceTree = "<group>"; };
+		71B5DC411C5F9ED3009C457A /* ic_category.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_category.png; path = Resources/Images/Icon/ic_category.png; sourceTree = "<group>"; };
+		71B5DC421C5F9ED3009C457A /* ic_find.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_find.png; path = Resources/Images/Icon/ic_find.png; sourceTree = "<group>"; };
+		71B5DC431C5F9ED3009C457A /* ic_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_home.png; path = Resources/Images/Icon/ic_home.png; sourceTree = "<group>"; };
+		71B5DC441C5F9ED3009C457A /* ic_mine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_mine.png; path = Resources/Images/Icon/ic_mine.png; sourceTree = "<group>"; };
+		71B5DC491C5F9F5A009C457A /* constants.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = constants.plist; path = Resources/Dictionaries/constants.plist; sourceTree = "<group>"; };
+		71B5DC4C1C5F9FCD009C457A /* FJConstantsUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJConstantsUtil.h; sourceTree = "<group>"; };
+		71B5DC4D1C5F9FCD009C457A /* FJConstantsUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJConstantsUtil.m; sourceTree = "<group>"; };
+		71B5DC4E1C5F9FCD009C457A /* FJImageUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJImageUtil.h; sourceTree = "<group>"; };
+		71B5DC4F1C5F9FCD009C457A /* FJImageUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJImageUtil.m; sourceTree = "<group>"; };
+		71B5DC501C5F9FCD009C457A /* FJSandboxUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJSandboxUtil.h; sourceTree = "<group>"; };
+		71B5DC511C5F9FCD009C457A /* FJSandboxUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJSandboxUtil.m; sourceTree = "<group>"; };
+		71B5DC7B1C5FA281009C457A /* FJTabHomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FJTabHomeView.xib; path = Home/FJTabHomeView.xib; sourceTree = "<group>"; };
+		71B5DC7E1C5FA412009C457A /* FJStartupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FJStartupView.xib; path = Main/FJStartupView.xib; sourceTree = "<group>"; };
+		71B5DC811C5FA537009C457A /* FJTabCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FJTabCategoryViewController.h; path = Controllers/Category/FJTabCategoryViewController.h; sourceTree = "<group>"; };
+		71B5DC821C5FA537009C457A /* FJTabCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FJTabCategoryViewController.m; path = Controllers/Category/FJTabCategoryViewController.m; sourceTree = "<group>"; };
+		71B5DC851C5FA576009C457A /* FJTabCategoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FJTabCategoryView.xib; path = Category/FJTabCategoryView.xib; sourceTree = "<group>"; };
+		71B5DC871C5FA5ED009C457A /* FJTabHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FJTabHomeViewController.h; path = Controllers/Home/FJTabHomeViewController.h; sourceTree = "<group>"; };
+		71B5DC881C5FA5ED009C457A /* FJTabHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FJTabHomeViewController.m; path = Controllers/Home/FJTabHomeViewController.m; sourceTree = "<group>"; };
+		71B5DC8B1C5FB38D009C457A /* FJTabFindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FJTabFindViewController.h; path = Controllers/Find/FJTabFindViewController.h; sourceTree = "<group>"; };
+		71B5DC8C1C5FB38D009C457A /* FJTabFindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FJTabFindViewController.m; path = Controllers/Find/FJTabFindViewController.m; sourceTree = "<group>"; };
+		71B5DC8F1C5FB475009C457A /* FJTabFindView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FJTabFindView.xib; path = Find/FJTabFindView.xib; sourceTree = "<group>"; };
+		71B5DC931C5FB50E009C457A /* FJTabMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FJTabMineViewController.h; path = Controllers/Mine/FJTabMineViewController.h; sourceTree = "<group>"; };
+		71B5DC941C5FB50E009C457A /* FJTabMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FJTabMineViewController.m; path = Controllers/Mine/FJTabMineViewController.m; sourceTree = "<group>"; };
+		71B5DC961C5FB52E009C457A /* FJTabMineView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FJTabMineView.xib; path = Mine/FJTabMineView.xib; sourceTree = "<group>"; };
+		71B5DC981C5FBE3F009C457A /* FJAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FJAboutViewController.h; path = Controllers/Mine/FJAboutViewController.h; sourceTree = "<group>"; };
+		71B5DC991C5FBE3F009C457A /* FJAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FJAboutViewController.m; path = Controllers/Mine/FJAboutViewController.m; sourceTree = "<group>"; };
+		71B5DC9B1C5FBE61009C457A /* FJAboutView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FJAboutView.xib; path = Mine/FJAboutView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +109,13 @@
 		71B5DC151C5F938D009C457A /* CoderExam */ = {
 			isa = PBXGroup;
 			children = (
+				71B5DC621C5FA0AC009C457A /* Views */,
+				71B5DC551C5FA0A1009C457A /* Models */,
+				71B5DC4B1C5F9FCD009C457A /* Utils */,
+				71B5DC361C5F9DC2009C457A /* Resources */,
+				71B5DC2D1C5F94D3009C457A /* Controllers */,
 				71B5DC191C5F938D009C457A /* AppDelegate.h */,
 				71B5DC1A1C5F938D009C457A /* AppDelegate.m */,
-				71B5DC1C1C5F938D009C457A /* ViewController.h */,
-				71B5DC1D1C5F938D009C457A /* ViewController.m */,
-				71B5DC1F1C5F938D009C457A /* Main.storyboard */,
 				71B5DC221C5F938D009C457A /* Assets.xcassets */,
 				71B5DC241C5F938D009C457A /* LaunchScreen.storyboard */,
 				71B5DC271C5F938D009C457A /* Info.plist */,
@@ -77,6 +130,194 @@
 				71B5DC171C5F938D009C457A /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		71B5DC2D1C5F94D3009C457A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				71B5DC921C5FB4EC009C457A /* Mine */,
+				71B5DC8A1C5FB350009C457A /* Find */,
+				71B5DC801C5FA4DA009C457A /* Category */,
+				71B5DC761C5FA178009C457A /* Home */,
+				71B5DC2F1C5F9637009C457A /* Main */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		71B5DC2F1C5F9637009C457A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				71B5DC301C5F9674009C457A /* FJMainViewController.h */,
+				71B5DC311C5F9674009C457A /* FJMainViewController.m */,
+				71B5DC331C5F96E5009C457A /* FJStartupViewController.h */,
+				71B5DC341C5F96E5009C457A /* FJStartupViewController.m */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		71B5DC361C5F9DC2009C457A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				71B5DC381C5F9E07009C457A /* Images */,
+				71B5DC371C5F9E00009C457A /* Dictionaries */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		71B5DC371C5F9E00009C457A /* Dictionaries */ = {
+			isa = PBXGroup;
+			children = (
+				71B5DC491C5F9F5A009C457A /* constants.plist */,
+			);
+			name = Dictionaries;
+			sourceTree = "<group>";
+		};
+		71B5DC381C5F9E07009C457A /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				71B5DC3B1C5F9E83009C457A /* Background */,
+				71B5DC3A1C5F9E6F009C457A /* Placeholder */,
+				71B5DC391C5F9E58009C457A /* Icon */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		71B5DC391C5F9E58009C457A /* Icon */ = {
+			isa = PBXGroup;
+			children = (
+				71B5DC411C5F9ED3009C457A /* ic_category.png */,
+				71B5DC421C5F9ED3009C457A /* ic_find.png */,
+				71B5DC431C5F9ED3009C457A /* ic_home.png */,
+				71B5DC441C5F9ED3009C457A /* ic_mine.png */,
+			);
+			name = Icon;
+			sourceTree = "<group>";
+		};
+		71B5DC3A1C5F9E6F009C457A /* Placeholder */ = {
+			isa = PBXGroup;
+			children = (
+				71B5DC3F1C5F9EBF009C457A /* placeholder@2x.png */,
+			);
+			name = Placeholder;
+			sourceTree = "<group>";
+		};
+		71B5DC3B1C5F9E83009C457A /* Background */ = {
+			isa = PBXGroup;
+			children = (
+				71B5DC3D1C5F9EAF009C457A /* startup.png */,
+			);
+			name = Background;
+			sourceTree = "<group>";
+		};
+		71B5DC4B1C5F9FCD009C457A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				71B5DC4C1C5F9FCD009C457A /* FJConstantsUtil.h */,
+				71B5DC4D1C5F9FCD009C457A /* FJConstantsUtil.m */,
+				71B5DC4E1C5F9FCD009C457A /* FJImageUtil.h */,
+				71B5DC4F1C5F9FCD009C457A /* FJImageUtil.m */,
+				71B5DC501C5F9FCD009C457A /* FJSandboxUtil.h */,
+				71B5DC511C5F9FCD009C457A /* FJSandboxUtil.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		71B5DC551C5FA0A1009C457A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		71B5DC621C5FA0AC009C457A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				71B5DC911C5FB4DB009C457A /* Mine */,
+				71B5DC8E1C5FB45E009C457A /* Find */,
+				71B5DC841C5FA54E009C457A /* Category */,
+				71B5DC7D1C5FA3C5009C457A /* Main */,
+				71B5DC7A1C5FA262009C457A /* Home */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		71B5DC761C5FA178009C457A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				71B5DC871C5FA5ED009C457A /* FJTabHomeViewController.h */,
+				71B5DC881C5FA5ED009C457A /* FJTabHomeViewController.m */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		71B5DC7A1C5FA262009C457A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				71B5DC7B1C5FA281009C457A /* FJTabHomeView.xib */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		71B5DC7D1C5FA3C5009C457A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				71B5DC7E1C5FA412009C457A /* FJStartupView.xib */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		71B5DC801C5FA4DA009C457A /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				71B5DC811C5FA537009C457A /* FJTabCategoryViewController.h */,
+				71B5DC821C5FA537009C457A /* FJTabCategoryViewController.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
+		71B5DC841C5FA54E009C457A /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				71B5DC851C5FA576009C457A /* FJTabCategoryView.xib */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
+		71B5DC8A1C5FB350009C457A /* Find */ = {
+			isa = PBXGroup;
+			children = (
+				71B5DC8B1C5FB38D009C457A /* FJTabFindViewController.h */,
+				71B5DC8C1C5FB38D009C457A /* FJTabFindViewController.m */,
+			);
+			name = Find;
+			sourceTree = "<group>";
+		};
+		71B5DC8E1C5FB45E009C457A /* Find */ = {
+			isa = PBXGroup;
+			children = (
+				71B5DC8F1C5FB475009C457A /* FJTabFindView.xib */,
+			);
+			name = Find;
+			sourceTree = "<group>";
+		};
+		71B5DC911C5FB4DB009C457A /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				71B5DC961C5FB52E009C457A /* FJTabMineView.xib */,
+				71B5DC9B1C5FBE61009C457A /* FJAboutView.xib */,
+			);
+			name = Mine;
+			sourceTree = "<group>";
+		};
+		71B5DC921C5FB4EC009C457A /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				71B5DC931C5FB50E009C457A /* FJTabMineViewController.h */,
+				71B5DC941C5FB50E009C457A /* FJTabMineViewController.m */,
+				71B5DC981C5FBE3F009C457A /* FJAboutViewController.h */,
+				71B5DC991C5FBE3F009C457A /* FJAboutViewController.m */,
+			);
+			name = Mine;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +378,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71B5DC971C5FB52E009C457A /* FJTabMineView.xib in Resources */,
+				71B5DC461C5F9ED3009C457A /* ic_find.png in Resources */,
+				71B5DC401C5F9EBF009C457A /* placeholder@2x.png in Resources */,
+				71B5DC861C5FA576009C457A /* FJTabCategoryView.xib in Resources */,
+				71B5DC471C5F9ED3009C457A /* ic_home.png in Resources */,
+				71B5DC451C5F9ED3009C457A /* ic_category.png in Resources */,
+				71B5DC9C1C5FBE61009C457A /* FJAboutView.xib in Resources */,
 				71B5DC261C5F938D009C457A /* LaunchScreen.storyboard in Resources */,
+				71B5DC7C1C5FA281009C457A /* FJTabHomeView.xib in Resources */,
+				71B5DC3E1C5F9EAF009C457A /* startup.png in Resources */,
 				71B5DC231C5F938D009C457A /* Assets.xcassets in Resources */,
-				71B5DC211C5F938D009C457A /* Main.storyboard in Resources */,
+				71B5DC7F1C5FA412009C457A /* FJStartupView.xib in Resources */,
+				71B5DC481C5F9ED3009C457A /* ic_mine.png in Resources */,
+				71B5DC4A1C5F9F5A009C457A /* constants.plist in Resources */,
+				71B5DC901C5FB475009C457A /* FJTabFindView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,23 +403,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71B5DC1E1C5F938D009C457A /* ViewController.m in Sources */,
+				71B5DC891C5FA5ED009C457A /* FJTabHomeViewController.m in Sources */,
+				71B5DC321C5F9674009C457A /* FJMainViewController.m in Sources */,
+				71B5DC351C5F96E5009C457A /* FJStartupViewController.m in Sources */,
+				71B5DC521C5F9FCD009C457A /* FJConstantsUtil.m in Sources */,
+				71B5DC8D1C5FB38D009C457A /* FJTabFindViewController.m in Sources */,
+				71B5DC9A1C5FBE3F009C457A /* FJAboutViewController.m in Sources */,
 				71B5DC1B1C5F938D009C457A /* AppDelegate.m in Sources */,
 				71B5DC181C5F938D009C457A /* main.m in Sources */,
+				71B5DC531C5F9FCD009C457A /* FJImageUtil.m in Sources */,
+				71B5DC541C5F9FCD009C457A /* FJSandboxUtil.m in Sources */,
+				71B5DC831C5FA537009C457A /* FJTabCategoryViewController.m in Sources */,
+				71B5DC951C5FB50E009C457A /* FJTabMineViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		71B5DC1F1C5F938D009C457A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				71B5DC201C5F938D009C457A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		71B5DC241C5F938D009C457A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

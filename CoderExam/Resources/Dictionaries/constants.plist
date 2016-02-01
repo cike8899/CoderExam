@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>url</key>
+	<dict>
+		<key>hostUrl</key>
+		<string>http://192.168.0.111:8080/testsite1</string>
+		<key>loginPath</key>
+		<string>/public/user/v1/account/login</string>
+		<key>registerPath</key>
+		<string>/public/user/v1/account/register</string>
+		<key>remoteServerUrl</key>
+		<string>http://121.43.230.33:8888/rural_shop</string>
+		<key>commodityListPath</key>
+		<string>/public/goods/v1/list?pageNo=1&amp;pageSize=20</string>
+		<key>commodityDetailPath</key>
+		<string>/public/goods/v1/detail</string>
+		<key>cartAddPath</key>
+		<string>/yimalls/cart/v1/add</string>
+		<key>cartListPath</key>
+		<string>/yimalls/cart/v1/list</string>
+	</dict>
+</dict>
+</plist>

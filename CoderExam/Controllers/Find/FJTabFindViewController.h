@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  FJTabFindViewController.h
 //  CoderExam
 //
 //  Created by 刘少明 on 16/2/1.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface FJTabFindViewController : UIViewController
 
 @end
-
