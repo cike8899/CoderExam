@@ -33,7 +33,7 @@
     // 将 任务 添加 全局队列 中去 异步 执行
     dispatch_async(queue, ^{
         NSLog(@"---thread id: %@", [NSThread currentThread]);
-        [NSThread sleepForTimeInterval:1.1];
+        [NSThread sleepForTimeInterval:2.0];
         dispatch_async(dispatch_get_main_queue(), ^{
             NSLog(@"---thread id: %@", [NSThread currentThread]);
             FJMainViewController *mainController = [[FJMainViewController alloc] init];
