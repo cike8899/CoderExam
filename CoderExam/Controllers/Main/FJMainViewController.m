@@ -50,14 +50,14 @@
     findController.tabBarItem.image = findImageVar;
     
     // Mine Tab Bar
-    FJTabMineViewController *otherController = [[FJTabMineViewController alloc] init];
+    FJTabMineViewController *mineController = [[FJTabMineViewController alloc] init];
     UIImage *mineImage = [UIImage imageNamed:@"ic_mine"];
     UIImage *mineImageVar = [FJImageUtil scaleToSize:mineImage size:CGSizeMake(25.0, 25.0)];
-    otherController.tabBarItem.title = @"我";
-    otherController.tabBarItem.image = mineImageVar;
+    mineController.tabBarItem.title = @"我";
+    mineController.tabBarItem.image = mineImageVar;
     
     // Generate Tab Menu.
-    self.viewControllers = @[homeController, categoryController, findController, otherController];
+    self.viewControllers = @[homeController, categoryController, findController, mineController];
 }
 
 - (void)didReceiveMemoryWarning {

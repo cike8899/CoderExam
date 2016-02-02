@@ -17,16 +17,6 @@
 
 @implementation FJStartupViewController
 
-- (instancetype)init {
-    self = [super init];
-    if (self) {
-        UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:nil action:nil];
-        backItem.enabled = false;
-        self.navigationItem.backBarButtonItem = backItem;
-    }
-    return self;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self sleepForAWhile];

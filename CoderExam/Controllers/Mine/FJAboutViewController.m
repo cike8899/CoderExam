@@ -18,7 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.aboutLable.text = @"\tIT面试宝典\n\nXXXX信息技术有限公司产品\n作者：刘少明\n版本：1.0";
+    self.aboutLable.text = @"\t\t\t IT面试宝典\n\n\t 作者：SHAOMING LIU\n\t 版本：1.0\n\t XXXX信息技术有限公司产品.";
 }
 
 - (void)didReceiveMemoryWarning {

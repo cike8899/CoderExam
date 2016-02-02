@@ -20,11 +20,18 @@
 
 - (UITableView *)tableView {
     if (_tableView == nil) {
-        _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        CGFloat width = self.view.bounds.size.width - 225;
+        CGRect rect = CGRectMake(self.view.bounds.origin.x,
+                                 self.view.bounds.origin.y,
+                                 width,
+                                 self.view.bounds.size.height);
+//        _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        // Enable cell.accessoryType, should make rect.size.width < width of screen. Or the accessory (for example array icon) can not shown.
+        _tableView = [[UITableView alloc] initWithFrame:rect style:UITableViewStylePlain];
+        
         _tableView.rowHeight = 40.0;
-//        float bottom = self.view.bounds.size.height - 110;
-        _tableView.contentInset = UIEdgeInsetsMake(50, 0, 50, 0);
-        // 取消边界弹簧效果
+//        _tableView.contentInset = UIEdgeInsetsMake(50, 0, 50, 0);
+        // Disable bounces effects.
         _tableView.bounces = NO;
         _tableView.dataSource = self;
         _tableView.delegate = self;
@@ -45,27 +52,38 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return 3;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *ID = @"mine";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
     }
-    if (indexPath.row == 0) {
-        cell.textLabel.text = @"关于";
-//        cell.detailTextLabel.text = @"--";
-        cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+    switch (indexPath.row) {
+        case 0:
+            cell.textLabel.text = @" 账号";
+            break;
+        case 1:
+            cell.textLabel.text = @" 设置";
+            break;
+            
+        default:
+            cell.textLabel.text = @" 关于";
+            break;
     }
+    
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"%ld", indexPath.row);
-    FJAboutViewController *aboutController = [[FJAboutViewController alloc] init];
-    [self.navigationController pushViewController:aboutController animated:YES];
+    if (indexPath.row == 2) {
+        FJAboutViewController *aboutController = [[FJAboutViewController alloc] init];
+        [self.navigationController pushViewController:aboutController animated:YES];
+    }
 }
 
 @end
