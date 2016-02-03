@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		71948B501C6237AB00CB7F18 /* FJQuestionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71948B4F1C6237AB00CB7F18 /* FJQuestionListViewController.m */; };
+		71948B531C6237F900CB7F18 /* FJQuestionListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71948B521C6237F900CB7F18 /* FJQuestionListView.xib */; };
 		71B5DC181C5F938D009C457A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B5DC171C5F938D009C457A /* main.m */; };
 		71B5DC1B1C5F938D009C457A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B5DC1A1C5F938D009C457A /* AppDelegate.m */; };
 		71B5DC231C5F938D009C457A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71B5DC221C5F938D009C457A /* Assets.xcassets */; };
@@ -37,6 +39,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		71948B4E1C6237AB00CB7F18 /* FJQuestionListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FJQuestionListViewController.h; path = Controllers/Exam/FJQuestionListViewController.h; sourceTree = "<group>"; };
+		71948B4F1C6237AB00CB7F18 /* FJQuestionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FJQuestionListViewController.m; path = Controllers/Exam/FJQuestionListViewController.m; sourceTree = "<group>"; };
+		71948B521C6237F900CB7F18 /* FJQuestionListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FJQuestionListView.xib; path = Exam/FJQuestionListView.xib; sourceTree = "<group>"; };
 		71B5DC131C5F938D009C457A /* CoderExam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoderExam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71B5DC171C5F938D009C457A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		71B5DC191C5F938D009C457A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -90,6 +95,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		71948B4D1C62368800CB7F18 /* Exam */ = {
+			isa = PBXGroup;
+			children = (
+				71948B4E1C6237AB00CB7F18 /* FJQuestionListViewController.h */,
+				71948B4F1C6237AB00CB7F18 /* FJQuestionListViewController.m */,
+			);
+			name = Exam;
+			sourceTree = "<group>";
+		};
+		71948B511C6237BE00CB7F18 /* Exam */ = {
+			isa = PBXGroup;
+			children = (
+				71948B521C6237F900CB7F18 /* FJQuestionListView.xib */,
+			);
+			name = Exam;
+			sourceTree = "<group>";
+		};
 		71B5DC0A1C5F938D009C457A = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +157,7 @@
 		71B5DC2D1C5F94D3009C457A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				71948B4D1C62368800CB7F18 /* Exam */,
 				71B5DC921C5FB4EC009C457A /* Mine */,
 				71B5DC8A1C5FB350009C457A /* Find */,
 				71B5DC801C5FA4DA009C457A /* Category */,
@@ -232,6 +255,7 @@
 		71B5DC621C5FA0AC009C457A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				71948B511C6237BE00CB7F18 /* Exam */,
 				71B5DC911C5FB4DB009C457A /* Mine */,
 				71B5DC8E1C5FB45E009C457A /* Find */,
 				71B5DC841C5FA54E009C457A /* Category */,
@@ -384,6 +408,7 @@
 				71B5DC861C5FA576009C457A /* FJTabCategoryView.xib in Resources */,
 				71B5DC471C5F9ED3009C457A /* ic_home.png in Resources */,
 				71B5DC451C5F9ED3009C457A /* ic_category.png in Resources */,
+				71948B531C6237F900CB7F18 /* FJQuestionListView.xib in Resources */,
 				71B5DC9C1C5FBE61009C457A /* FJAboutView.xib in Resources */,
 				71B5DC261C5F938D009C457A /* LaunchScreen.storyboard in Resources */,
 				71B5DC7C1C5FA281009C457A /* FJTabHomeView.xib in Resources */,
@@ -410,6 +435,7 @@
 				71B5DC8D1C5FB38D009C457A /* FJTabFindViewController.m in Sources */,
 				71B5DC9A1C5FBE3F009C457A /* FJAboutViewController.m in Sources */,
 				71B5DC1B1C5F938D009C457A /* AppDelegate.m in Sources */,
+				71948B501C6237AB00CB7F18 /* FJQuestionListViewController.m in Sources */,
 				71B5DC181C5F938D009C457A /* main.m in Sources */,
 				71B5DC531C5F9FCD009C457A /* FJImageUtil.m in Sources */,
 				71B5DC541C5F9FCD009C457A /* FJSandboxUtil.m in Sources */,
@@ -553,6 +579,7 @@
 				71B5DC2C1C5F938D009C457A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

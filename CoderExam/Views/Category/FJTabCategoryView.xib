@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FJTabCategoryViewController">
             <connections>
+                <outlet property="javaCategoryBtn" destination="xeZ-RO-qBO" id="MBF-H3-wWk"/>
                 <outlet property="view" destination="iN0-l3-epB" id="mq4-Sp-rqF"/>
             </connections>
         </placeholder>
@@ -15,14 +16,29 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="分类" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="odZ-R7-aXJ">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="分类" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="odZ-R7-aXJ">
                     <rect key="frame" x="100" y="80" width="200" height="50"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xeZ-RO-qBO" userLabel="javaCategoryBtn">
+                    <rect key="frame" x="60" y="160" width="280" height="35"/>
+                    <color key="backgroundColor" red="0.47525905593689899" green="0.5551125352513897" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Java">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="onItemClick:" destination="-1" eventType="touchUpInside" id="38A-ZY-53k"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="xeZ-RO-qBO" secondAttribute="trailing" constant="60" id="i3w-mf-RIf"/>
+                <constraint firstItem="xeZ-RO-qBO" firstAttribute="top" secondItem="odZ-R7-aXJ" secondAttribute="bottom" constant="30" id="q4b-aD-5qV"/>
+                <constraint firstItem="xeZ-RO-qBO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="60" id="r3O-P0-DGb"/>
+            </constraints>
         </view>
     </objects>
 </document>

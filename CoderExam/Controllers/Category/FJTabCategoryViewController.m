@@ -7,8 +7,11 @@
 //
 
 #import "FJTabCategoryViewController.h"
+#import "FJQuestionListViewController.h"
 
 @interface FJTabCategoryViewController ()
+
+@property (nonatomic, strong) IBOutlet UIButton *javaCategoryBtn;
 
 @end
 
@@ -24,14 +27,10 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)onItemClick:(UIButton *)sender {
+    FJQuestionListViewController *questionController = [[FJQuestionListViewController alloc] init];
+    [self.navigationController pushViewController:questionController
+                                         animated:YES];
 }
-*/
 
 @end
