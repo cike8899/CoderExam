@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		714148431C650EF1005DED9B /* LSMRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 714148401C650EF1005DED9B /* LSMRadioButton.m */; };
+		714148441C650EF1005DED9B /* RadioButton-Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 714148411C650EF1005DED9B /* RadioButton-Selected.png */; };
+		714148451C650EF1005DED9B /* RadioButton-Unselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 714148421C650EF1005DED9B /* RadioButton-Unselected.png */; };
 		71948B501C6237AB00CB7F18 /* FJQuestionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71948B4F1C6237AB00CB7F18 /* FJQuestionListViewController.m */; };
 		71948B531C6237F900CB7F18 /* FJQuestionListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71948B521C6237F900CB7F18 /* FJQuestionListView.xib */; };
 		71B5DC181C5F938D009C457A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B5DC171C5F938D009C457A /* main.m */; };
@@ -39,6 +42,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7141483F1C650ED3005DED9B /* LSMRadioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LSMRadioButton.h; path = CustomFramework/LSMRatioButton/LSMRadioButton.h; sourceTree = "<group>"; };
+		714148401C650EF1005DED9B /* LSMRadioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LSMRadioButton.m; path = CustomFramework/LSMRatioButton/LSMRadioButton.m; sourceTree = "<group>"; };
+		714148411C650EF1005DED9B /* RadioButton-Selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "RadioButton-Selected.png"; path = "CustomFramework/LSMRatioButton/RadioButton-Selected.png"; sourceTree = "<group>"; };
+		714148421C650EF1005DED9B /* RadioButton-Unselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "RadioButton-Unselected.png"; path = "CustomFramework/LSMRatioButton/RadioButton-Unselected.png"; sourceTree = "<group>"; };
 		71948B4E1C6237AB00CB7F18 /* FJQuestionListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FJQuestionListViewController.h; path = Controllers/Exam/FJQuestionListViewController.h; sourceTree = "<group>"; };
 		71948B4F1C6237AB00CB7F18 /* FJQuestionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FJQuestionListViewController.m; path = Controllers/Exam/FJQuestionListViewController.m; sourceTree = "<group>"; };
 		71948B521C6237F900CB7F18 /* FJQuestionListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FJQuestionListView.xib; path = Exam/FJQuestionListView.xib; sourceTree = "<group>"; };
@@ -95,6 +102,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7141483E1C650EA0005DED9B /* LSMRatioButton */ = {
+			isa = PBXGroup;
+			children = (
+				714148411C650EF1005DED9B /* RadioButton-Selected.png */,
+				714148421C650EF1005DED9B /* RadioButton-Unselected.png */,
+				7141483F1C650ED3005DED9B /* LSMRadioButton.h */,
+				714148401C650EF1005DED9B /* LSMRadioButton.m */,
+			);
+			name = LSMRatioButton;
+			sourceTree = "<group>";
+		};
+		718AC30A1C64EBED007D009E /* CustomFramework */ = {
+			isa = PBXGroup;
+			children = (
+				7141483E1C650EA0005DED9B /* LSMRatioButton */,
+			);
+			name = CustomFramework;
+			sourceTree = "<group>";
+		};
 		71948B4D1C62368800CB7F18 /* Exam */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +157,7 @@
 		71B5DC151C5F938D009C457A /* CoderExam */ = {
 			isa = PBXGroup;
 			children = (
+				718AC30A1C64EBED007D009E /* CustomFramework */,
 				71B5DC621C5FA0AC009C457A /* Views */,
 				71B5DC551C5FA0A1009C457A /* Models */,
 				71B5DC4B1C5F9FCD009C457A /* Utils */,
@@ -402,6 +429,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				714148441C650EF1005DED9B /* RadioButton-Selected.png in Resources */,
 				71B5DC971C5FB52E009C457A /* FJTabMineView.xib in Resources */,
 				71B5DC461C5F9ED3009C457A /* ic_find.png in Resources */,
 				71B5DC401C5F9EBF009C457A /* placeholder@2x.png in Resources */,
@@ -410,6 +438,7 @@
 				71B5DC451C5F9ED3009C457A /* ic_category.png in Resources */,
 				71948B531C6237F900CB7F18 /* FJQuestionListView.xib in Resources */,
 				71B5DC9C1C5FBE61009C457A /* FJAboutView.xib in Resources */,
+				714148451C650EF1005DED9B /* RadioButton-Unselected.png in Resources */,
 				71B5DC261C5F938D009C457A /* LaunchScreen.storyboard in Resources */,
 				71B5DC7C1C5FA281009C457A /* FJTabHomeView.xib in Resources */,
 				71B5DC3E1C5F9EAF009C457A /* startup.png in Resources */,
@@ -432,6 +461,7 @@
 				71B5DC321C5F9674009C457A /* FJMainViewController.m in Sources */,
 				71B5DC351C5F96E5009C457A /* FJStartupViewController.m in Sources */,
 				71B5DC521C5F9FCD009C457A /* FJConstantsUtil.m in Sources */,
+				714148431C650EF1005DED9B /* LSMRadioButton.m in Sources */,
 				71B5DC8D1C5FB38D009C457A /* FJTabFindViewController.m in Sources */,
 				71B5DC9A1C5FBE3F009C457A /* FJAboutViewController.m in Sources */,
 				71B5DC1B1C5F938D009C457A /* AppDelegate.m in Sources */,

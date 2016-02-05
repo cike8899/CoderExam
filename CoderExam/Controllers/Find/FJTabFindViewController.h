@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LSMRadioButton.h"
 
-@interface FJTabFindViewController : UIViewController
+@interface FJTabFindViewController : UIViewController <RadioButtonDelegate>
 
 @end
