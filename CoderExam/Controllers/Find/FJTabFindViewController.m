@@ -35,7 +35,7 @@
     UIView *container = [[UIView alloc] initWithFrame:CGRectMake(margingLeft, 80, widthVar, 400)];
     container.backgroundColor = [UIColor lightGrayColor];
     [self.view addSubview:container]
-    ;
+;
     //初始化UILabel并添加到之前的视图容器
     UILabel *questionText = [[UILabel alloc] initWithFrame:CGRectMake(0,0,280,20)];
     questionText.backgroundColor = [UIColor clearColor];

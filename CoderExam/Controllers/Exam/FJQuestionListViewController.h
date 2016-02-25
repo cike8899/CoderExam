@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LSMRadioButton.h"
 
-@interface FJQuestionListViewController : UIViewController <UIScrollViewDelegate>
+@interface FJQuestionListViewController : UIViewController <UIScrollViewDelegate, RadioButtonDelegate>
 
 @end
