@@ -7,6 +7,8 @@
 //
 
 #import "FJQuestionListViewController.h"
+#import "RadioBox.h"
+#import "RadioGroup.h"
 #define CONTENT_SCROLL_VIEW_TAG 100
 #define ANSWER_SCROLL_VIEW_TAG 101
 
@@ -22,6 +24,9 @@
 @property (nonatomic, assign) CGFloat screenHeight;
 @property (nonatomic, assign) CGFloat screenX;
 @property (nonatomic, assign) CGFloat screenY;
+
+// RadioBox
+@property (nonatomic, strong) NSMutableArray *radioGroupArray;
 
 @end
 
@@ -43,6 +48,7 @@
     
     [self initializeData];
     [self addQuestionContentPager];
+    [self addScoreBtn];
 //    [self addQuestionAnswerPager];
 }
 
@@ -61,8 +67,15 @@
     
     if (self.questionAnswerArray == nil) {
         self.questionAnswerArray = [NSMutableArray arrayWithCapacity:50];
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 50; i++) {
             self.questionAnswerArray[i] = [NSNumber numberWithInt:99];
+        }
+    }
+    
+    if (self.radioGroupArray == nil) {
+        self.radioGroupArray = [NSMutableArray arrayWithCapacity:50];
+        for (int i = 0; i < 50; i++) {
+
         }
     }
 }
@@ -96,7 +109,7 @@
     _helpContentScrView = [[UIScrollView alloc] initWithFrame:CGRectMake(self.screenX,
         self.screenY + 65,
         self.screenWidth,
-        self.screenHeight)];  //创建UIScrollView，位置大小与主界面一样。
+        self.screenHeight - 100)];  //创建UIScrollView，位置大小与主界面一样。
 //    _helpContentScrView.backgroundColor = [UIColor redColor];
     _helpContentScrView.tag = CONTENT_SCROLL_VIEW_TAG;
     [_helpContentScrView setContentSize:CGSizeMake(self.screenWidth * pageCount, self.screenHeight)];  //设置全部内容的尺寸
@@ -142,50 +155,71 @@
 }
 
 - (void)AddRadioButton:(int)pageIndex {
-    NSString *groupIdVar = [NSString stringWithFormat:@"group%d",pageIndex];
-
-    //初始化单选按钮控件
-    LSMRadioButton *rb1 = [[LSMRadioButton alloc] initWithGroupId:groupIdVar index:0];
-    LSMRadioButton *rb2 = [[LSMRadioButton alloc] initWithGroupId:groupIdVar index:1];
-    LSMRadioButton *rb3 = [[LSMRadioButton alloc] initWithGroupId:groupIdVar index:2];
-    //设置Frame
     float originYOfAnswer = 0.4 * self.screenHeight;
-    rb1.frame = CGRectMake(10 + pageIndex * self.screenWidth, originYOfAnswer + 30, 22, 22);
-    rb2.frame = CGRectMake(10 + pageIndex * self.screenWidth, originYOfAnswer + 60, 22, 22);
-    rb3.frame = CGRectMake(10 + pageIndex * self.screenWidth, originYOfAnswer + 90, 22, 22);
-    //添加到视图容器
-    [_helpContentScrView addSubview:rb1];
-    [_helpContentScrView addSubview:rb2];
-    [_helpContentScrView addSubview:rb3];
     
-    //初始化第一个单选按钮的UILabel
-    UILabel *label1 =[[UILabel alloc] initWithFrame:CGRectMake(40 + pageIndex * self.screenWidth, originYOfAnswer + 30, 60, 20)];
-    label1.backgroundColor = [UIColor clearColor];
-    label1.text = @"Red";
-    [_helpContentScrView addSubview:label1];
-    //    [label1 release];
+    //代码实现
+    RadioBox *radiobox0 = [[RadioBox alloc] initWithFrame:CGRectMake(12, 10, 100, 10)];
+    RadioBox *radiobox1 = [[RadioBox alloc] initWithFrame:CGRectMake(12, 50, 100, 10)];
+    RadioBox *radiobox2 = [[RadioBox alloc] initWithFrame:CGRectMake(12, 90, 100, 10)];
+    RadioBox *radiobox3 = [[RadioBox alloc] initWithFrame:CGRectMake(12, 130, 100, 10)];
     
-    UILabel *label2 =[[UILabel alloc] initWithFrame:CGRectMake(40 + pageIndex * self.screenWidth, originYOfAnswer + 60, 60, 20)];
-    label2.backgroundColor = [UIColor clearColor];
-    label2.text = @"Green";
-    [_helpContentScrView addSubview:label2];
+    radiobox0.text = @"选项一";
+    radiobox1.text = @"选项二";
+    radiobox2.text = @"选项三";
+    radiobox3.text = @"选项四";
     
-    UILabel *label3 =[[UILabel alloc] initWithFrame:CGRectMake(40 + pageIndex * self.screenWidth, originYOfAnswer + 90, 60, 20)];
-    label3.backgroundColor = [UIColor clearColor];
-    label3.text = @"Blue";
-    [_helpContentScrView addSubview:label3];
+    radiobox0.value = 0;
+    radiobox1.value = 1;
+    radiobox2.value = 2;
+    radiobox3.value = 3;
     
-    //按照GroupId添加观察者
-    [LSMRadioButton addObserverForGroupId:groupIdVar observer:self];
+    NSArray *controls = [NSArray arrayWithObjects:radiobox0,
+                     radiobox1,
+                     radiobox2,
+                     radiobox3,
+                     nil];
+    
+    RadioGroup * radioGroup = [[RadioGroup alloc] initWithFrame:CGRectMake(self.screenX + pageIndex * self.screenWidth, originYOfAnswer, 0.8 * self.screenWidth, 162) WithControl:controls];
+    
+    [radioGroup addSubview:radiobox0];
+    [radioGroup addSubview:radiobox1];
+    [radioGroup addSubview:radiobox2];
+    [radioGroup addSubview:radiobox3];
+    
+    radioGroup.backgroundColor = [UIColor cyanColor];
+    radioGroup.textFont = [UIFont systemFontOfSize:14.0];
+    //    radioGroup1.selectValue = 2;
+    
+    //    self.radioGroup1 = radioGroup1;
+    self.radioGroupArray[pageIndex] = controls;
+    [self.helpContentScrView addSubview:radioGroup];
 }
 
-//代理方法
--(void)radioButtonSelectedAtIndex:(NSUInteger)index inGroup:(NSString *)groupId {
-    int pageIndex = [groupId substringFromIndex:5].intValue;
-    self.questionAnswerArray[pageIndex] = [NSNumber numberWithInteger:index];
-    NSLog(@"Answer at page-%d- changed to %d", pageIndex, (uint)index);
-    
-    NSLog(@"------Answer result----%@", self.questionAnswerArray);
+- (void)addScoreBtn {
+    CGFloat scoreBtnY = self.screenHeight;
+    UIButton *testBtn = [[UIButton alloc] initWithFrame:CGRectMake(40, scoreBtnY, 50, 35)];
+    testBtn.backgroundColor = [UIColor magentaColor];
+    [testBtn setTitle:@"得分" forState:UIControlStateNormal];
+    [testBtn addTarget:self action:(@selector(onScoreBtnClick)) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:testBtn];
+}
+
+- (void)onScoreBtnClick {
+    for (int i = 0; i < self.questionContentArray.count; i++) {
+        NSLog(@"Answer of %dth question is: %ld", i
+              , [self getValueOfRadioGroup:self.radioGroupArray[i]]);
+    }
+}
+
+- (NSInteger)getValueOfRadioGroup:(NSArray *)group {
+    for (int i = 0; i < group.count; i++) {
+        RadioBox *box = group[i];
+        if (box.isOn) {
+            return i;
+        }
+    }
+    // NSIntegerMax表示这个RadioGroup未被选择过。
+    return NSIntegerMax;
 }
 
 @end

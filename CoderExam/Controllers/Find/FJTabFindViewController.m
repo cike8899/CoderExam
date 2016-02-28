@@ -7,9 +7,13 @@
 //
 
 #import "FJTabFindViewController.h"
-#import "LSMRadioButton.h"
+#import "RadioBox.h"
+#import "RadioGroup.h"
 
 @interface FJTabFindViewController ()
+
+@property (nonatomic, strong) RadioGroup *radioGroup1;
+@property (nonatomic, strong) NSArray *controls;
 
 @end
 
@@ -18,6 +22,28 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self TestRadioButton];
+    [self addTestBtn];
+}
+
+- (void)addTestBtn {
+    // 176, 171, 124, 226
+    UIButton *testBtn = [[UIButton alloc] initWithFrame:CGRectMake(176, 405, 40, 40)];
+    testBtn.backgroundColor = [UIColor redColor];
+    [testBtn addTarget:self action:(@selector(onBtnClick)) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:testBtn];
+}
+
+- (void)onBtnClick {
+//    int selectValue = (int)(self.radioGroup1.selectValue);
+//    NSString *selectText = (self.radioGroup1.selectText);
+//    NSLog(@"selectValue: %d, selectText: %@", selectValue, selectText);
+    
+//    NSLog(@"---selectValue----%ld", (long)self.radioGroup1.selectValue);
+//    NSLog(@"---selectText----%@", (long)self.radioGroup1.selectText);
+    RadioBox *box0 = self.controls[0];
+    NSLog(@"---radiobox1.isOn----%ld", (long)box0.isOn);
+    NSLog(@"---radiobox1.isOn----%@", box0.text);
+    NSLog(@"Selected:%ld", [self getValueOfRadioGroup:self.controls]);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -26,60 +52,52 @@
 }
 
 - (void)TestRadioButton {
-    [super viewDidLoad];
+    //代码实现
+    RadioBox *radiobox0 = [[RadioBox alloc] initWithFrame:CGRectMake(12, 10, 100, 10)];
+    RadioBox *radiobox1 = [[RadioBox alloc] initWithFrame:CGRectMake(12, 50, 100, 10)];
+    RadioBox *radiobox2 = [[RadioBox alloc] initWithFrame:CGRectMake(12, 90, 100, 10)];
+    RadioBox *radiobox3 = [[RadioBox alloc] initWithFrame:CGRectMake(12, 130, 100, 10)];
     
-    CGRect selfBounds = self.view.bounds;
-    CGFloat margingLeft = 15;
-    CGFloat widthVar = selfBounds.size.width *0.58;
-    //初始化视图容器
-    UIView *container = [[UIView alloc] initWithFrame:CGRectMake(margingLeft, 80, widthVar, 400)];
-    container.backgroundColor = [UIColor lightGrayColor];
-    [self.view addSubview:container]
-;
-    //初始化UILabel并添加到之前的视图容器
-    UILabel *questionText = [[UILabel alloc] initWithFrame:CGRectMake(0,0,280,20)];
-    questionText.backgroundColor = [UIColor clearColor];
-    questionText.text = @"Which color do you like?";
-    [container addSubview:questionText];
-    //初始化单选按钮控件
-    LSMRadioButton *rb1 = [[LSMRadioButton alloc] initWithGroupId:@"first group" index:0];
-    LSMRadioButton *rb2 = [[LSMRadioButton alloc] initWithGroupId:@"first group" index:1];
-    LSMRadioButton *rb3 = [[LSMRadioButton alloc] initWithGroupId:@"first group" index:2];
-    //设置Frame
-    rb1.frame = CGRectMake(10,30,22,22);
-    rb2.frame = CGRectMake(10,60,22,22);
-    rb3.frame = CGRectMake(10,90,22,22);
-    //添加到视图容器
-    [container addSubview:rb1];
-    [container addSubview:rb2];
-    [container addSubview:rb3];
+    radiobox0.text = @"选项一";
+    radiobox1.text = @"选项二";
+    radiobox2.text = @"选项三";
+    radiobox3.text = @"选项四";
     
-    //初始化第一个单选按钮的UILabel
-    UILabel *label1 =[[UILabel alloc] initWithFrame:CGRectMake(40, 30, 60, 20)];
-    label1.backgroundColor = [UIColor clearColor];
-    label1.text = @"Red";
-    [container addSubview:label1];
-//    [label1 release];
+    radiobox0.value = 0;
+    radiobox1.value = 1;
+    radiobox2.value = 2;
+    radiobox3.value = 3;
     
-    UILabel *label2 =[[UILabel alloc] initWithFrame:CGRectMake(40, 60, 60, 20)];
-    label2.backgroundColor = [UIColor clearColor];
-    label2.text = @"Green";
-    [container addSubview:label2];
+    self.controls = [NSArray arrayWithObjects:radiobox0,
+                     radiobox1,
+                     radiobox2,
+                     radiobox3,
+                     nil];
     
-    UILabel *label3 =[[UILabel alloc] initWithFrame:CGRectMake(40, 90, 60, 20)];
-    label3.backgroundColor = [UIColor clearColor];
-    label3.text = @"Blue";
-    [container addSubview:label3];
+    RadioGroup * radioGroup1 = [[RadioGroup alloc] initWithFrame:CGRectMake(40, 160, 124, 162) WithControl:self.controls];
     
-    //按照GroupId添加观察者
-    [LSMRadioButton addObserverForGroupId:@"first group" observer:self];
-
-    [super viewDidLoad];
+    [radioGroup1 addSubview:radiobox0];
+    [radioGroup1 addSubview:radiobox1];
+    [radioGroup1 addSubview:radiobox2];
+    [radioGroup1 addSubview:radiobox3];
+    
+    radioGroup1.backgroundColor = [UIColor cyanColor];
+    radioGroup1.textFont = [UIFont systemFontOfSize:14.0];
+//    radioGroup1.selectValue = 2;
+    
+//    self.radioGroup1 = radioGroup1;
+    [self.view addSubview:radioGroup1];
 }
 
-//代理方法
--(void)radioButtonSelectedAtIndex:(NSUInteger)index inGroup:(NSString *)groupId {
-    NSLog(@"changed to %d in %@",index,groupId);
+- (NSInteger)getValueOfRadioGroup:(NSArray *)group {
+    for (int i = 0; i < group.count; i++) {
+        RadioBox *box = group[i];
+        if (box.isOn) {
+            return i;
+        }
+    }
+    // NSIntegerMax表示这个RadioGroup未被选择过。
+    return NSIntegerMax;
 }
 
 @end
