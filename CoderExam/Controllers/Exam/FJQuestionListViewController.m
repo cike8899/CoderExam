@@ -107,12 +107,13 @@
     
     //创建UIScrollView
     _helpContentScrView = [[UIScrollView alloc] initWithFrame:CGRectMake(self.screenX,
-        self.screenY + 65,
+        self.screenY + 65.0,
         self.screenWidth,
-        self.screenHeight - 100)];  //创建UIScrollView，位置大小与主界面一样。
-//    _helpContentScrView.backgroundColor = [UIColor redColor];
+        self.screenHeight - 40.0)];  //创建UIScrollView，位置大小与主界面一样。
+    _helpContentScrView.backgroundColor = [UIColor redColor];
     _helpContentScrView.tag = CONTENT_SCROLL_VIEW_TAG;
-    [_helpContentScrView setContentSize:CGSizeMake(self.screenWidth * pageCount, self.screenHeight)];  //设置全部内容的尺寸
+    // setContentSize:CGSizeMake(xLength, 0), 以禁用UIScrollView在垂直方向的滚动.
+    [_helpContentScrView setContentSize:CGSizeMake(self.screenWidth * pageCount, 0)];  //设置全部内容的尺寸
     _helpContentScrView.pagingEnabled = YES;  //设为YES时，会按页滑动
     _helpContentScrView.bounces = NO; //取消UIScrollView的弹性属性，这个可以按个人喜好来定
     [_helpContentScrView setDelegate:self];//UIScrollView的delegate函数在本类中定义
@@ -196,12 +197,14 @@
 }
 
 - (void)addScoreBtn {
-    CGFloat scoreBtnY = self.screenHeight;
-    UIButton *testBtn = [[UIButton alloc] initWithFrame:CGRectMake(40, scoreBtnY, 50, 35)];
-    testBtn.backgroundColor = [UIColor magentaColor];
-    [testBtn setTitle:@"得分" forState:UIControlStateNormal];
-    [testBtn addTarget:self action:(@selector(onScoreBtnClick)) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:testBtn];
+    CGFloat scoreBtnY = self.screenHeight + 30.0;
+    UIButton *scoreBtn = [[UIButton alloc] initWithFrame:CGRectMake(20, scoreBtnY, 32, 20)];
+    scoreBtn.backgroundColor = [UIColor magentaColor];
+    
+    [scoreBtn setTitle:@"得分" forState:UIControlStateNormal];
+    scoreBtn.titleLabel.font = [UIFont systemFontOfSize:10.0];
+    [scoreBtn addTarget:self action:(@selector(onScoreBtnClick)) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:scoreBtn];
 }
 
 - (void)onScoreBtnClick {
